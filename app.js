@@ -1,22 +1,24 @@
-var players = ['#darts', '#darts2', '#darts3']
+var players = ['#darts'/*, '#darts2', '#darts3'*/];
 
 for (var player in players) {
   new Vue({
     el: players[player],
     data: {
-      value: 0,
+      current_value: null,
       score: 0
     },
     methods: {
-      adunare: function(event) {
-        var sageata = parseInt(this.value);
-        return this.score+= sageata;
-      },
+      // adunare: function(event) {
+      //   var sageata = parseInt(this.value);
+      //   return this.score+= sageata;
+      // },
       reseter: function(event) {
-        this.sageata = 0;
+        this.current_value = 0;
         this.score = 0;
-        this.value = 0;
-        return this;
+      },
+      submit: function(event) {
+        this.score += parseInt(this.current_value);
+        this.current_value = null;
       }
     }
   });
