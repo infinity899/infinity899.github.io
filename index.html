@@ -11,9 +11,48 @@
     <div id="darts">
         <div class="player">
             <h3>Player 1</h3>
-            <input type="number" @keyup.enter="value = $event.target.value, adunare()"> 
+            <form v-on:submit.prevent="onSubmit">
+                <input type="number" @keypress.enter="value = $event.target.value, adunare()">
+                <button type="submit">Add Score</button>
+            </form>
             <p>
                 Last round: {{ value }} 
+            </p>
+
+            <p>
+                Current round: {{ score }}
+            </p>
+            <button @click="reseter()">Reset score</button>
+        </div>
+    </div>
+
+    <div id="darts2">
+        <div class="player">
+            <h3>Player 2</h3>
+            <form v-on:submit.prevent="onSubmit">
+                <input type="number" @keypress.enter="value = $event.target.value, adunare()">
+                <button type="submit">Add Score</button>
+            </form>
+            <p>
+                Last round: {{ value }}
+            </p>
+
+            <p>
+                Current round: {{ score }}
+            </p>
+            <button @click="reseter()">Reset score</button>
+        </div>
+    </div>
+
+    <div id="darts3">
+        <div class="player">
+            <h3>Player 3</h3>
+            <form v-on:submit.prevent="onSubmit">
+                <input type="number" @keypress.enter="value = $event.target.value, adunare()">
+                <button type="submit">Add Score</button>
+            </form>
+            <p>
+                Last round: {{ value }}
             </p>
 
             <p>
