@@ -10,7 +10,7 @@
 <body>
     <div id="darts">
         <div class="player">
-            <input type="number" v-model="current_value" name="quantity" min="0" max="9" @keypress.enter="submit">
+            <input type="number" v-model="current_value" @keypress.enter="submit">
             <p>
                 Current value: {{ current_value }}
             </p>
