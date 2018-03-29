@@ -20,6 +20,11 @@ Vue.component('darts_player', {
   methods: {
     submit: function(event) {
       this.score += parseInt(this.current_value);
+      if (this.score > 301) {
+        this.score -= parseInt(this.current_value);
+      } else if (this.score == 301) {
+        alert("we have a winner");
+      }
       this.current_value = null;
     },
     reseter: function(event) {
@@ -37,7 +42,7 @@ Vue.component('darts_player', {
 })
 
 new Vue({
-  el: '#components-demo',
+  el: '#darts-tracker',
   data: {
     inc: 0
   }
