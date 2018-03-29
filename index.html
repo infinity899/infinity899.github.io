@@ -10,9 +10,10 @@
 </head>
 <body>
 <h1>Darts Tracker</h1>
-<div id="components-demo">
+<div id="darts-tracker">
     <button class="add-player" @click="inc++">Add player</button>
      <div v-for="n in inc">
+         <h4> Player - {{ n }}</h4>
          <darts_player></darts_player>
      </div>
 </div>
