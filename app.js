@@ -13,7 +13,9 @@ Vue.component('darts_player', {
   '<p>Current round: {{ score }}</p>' +
   '<button @click="reseter()">Reset score</button>' +
   '</div>' +
+  '<div class="progress-bar-container">' +
   '<div class="progress-bar" :style="myStyle"></div>' +
+  '</div>' +
   '</div>',
   methods: {
     submit: function(event) {
