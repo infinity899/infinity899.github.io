@@ -2,3 +2,20 @@
   padding: 8px;
   margin: 24px;
 }
+
+.progress-bar {
+  width: 12px;
+  background: linear-gradient(#6AF906, #224D05);;
+  max-height: 150px;
+  margin-left: 12px;
+  border-radius: 4px;
+}
+
+.player,
+.player-score {
+  display: flex;
+}
+
+.player-score {
+  flex-direction: column;
+}
