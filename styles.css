@@ -3,11 +3,19 @@
   margin: 24px;
 }
 
+.progress-bar-container {
+  width: 12px;
+  height: 150px;
+  position: relative;
+  border: 1px solid #FF555A;
+  margin-left: 12px;
+  border-radius: 4px;
+}
 .progress-bar {
   width: 12px;
+  position: absolute;
   background: linear-gradient(#6AF906, #224D05);;
   max-height: 150px;
-  margin-left: 12px;
   border-radius: 4px;
 }
 
