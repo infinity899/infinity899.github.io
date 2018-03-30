@@ -4,7 +4,9 @@
   margin: 0; }
 
 body {
-  height: 100vh; }
+  background-color: #F5F5F5;
+  height: 100vh;
+  font-family: sans-serif; }
 
 .button {
   display: block;
@@ -29,24 +31,29 @@ body {
     border: 1px solid #FF555A;
     padding: 8px 16px; }
 
+.progress {
+  display: flex;
+  justify-content: space-between; }
+
 .progress-bar-container {
-  width: 12px;
-  height: 150px;
+  height: 16px;
+  width: 153px;
   position: relative;
   border: 1px solid #FF555A;
-  margin-left: 12px;
+  background: linear-gradient(90deg, #FF555A, #224D05);
   border-radius: 4px; }
 
 .progress-bar {
-  width: 12px;
+  height: 14px;
   position: absolute;
-  background: linear-gradient(#6AF906, #224D05);
-  max-height: 150px;
-  border-radius: 4px; }
+  background-color: #ffffff;
+  border-radius: 4px;
+  right: 0; }
 
 .player,
 .player-score {
-  display: flex; }
+  display: flex;
+  height: 160px; }
 
 .player {
   margin-bottom: 24px; }
@@ -59,7 +66,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px; }
+  padding-bottom: 16px; }
   .player-container input {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -79,5 +86,14 @@ body {
 .title {
   text-align: center;
   margin-bottom: 32px; }
+
+.score {
+  align-self: center; }
+
+.player-container:nth-child(even) {
+  background-color: #E8E8E8; }
+
+.player-container:nth-child(odd) {
+  background-color: #F5F5F5; }
 
 /*# sourceMappingURL=styles.css.map */
