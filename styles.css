@@ -5,6 +5,7 @@
 
 body {
   background-color: #F5F5F5;
+  font-size: 16px;
   height: 100vh;
   font-family: sans-serif; }
 
@@ -36,7 +37,7 @@ body {
   .button.btn-reseter {
     border: 1px solid #FF555A;
     padding: 4px 8px;
-    font-size: 12px;
+    font-size: inherit;
     text-transform: uppercase; }
 
 .progress {
@@ -109,7 +110,8 @@ body {
     -moz-box-shadow: 1px 1px 4px #EBEBEB;
     -webkit-box-shadow: 1px 1px 4px #EBEBEB;
     padding: 7px;
-    outline: none; }
+    outline: none;
+    font-size: 16px; }
     .player-container input:focus {
       border: 1px solid #0C0; }
 
