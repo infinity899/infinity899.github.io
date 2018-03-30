@@ -51,6 +51,15 @@ Vue.component('darts_player', {
 new Vue({
   el: '#darts-tracker',
   data: {
-    inc: 0
+    inc: 0,
+    player: [],
+    name_value: ''
+  },
+  methods: {
+    submit_player: function(event) {
+      this.player[this.inc] = this.name_value;
+      this.name_value = "";
+      this.inc ++;
+    }
   }
 })
