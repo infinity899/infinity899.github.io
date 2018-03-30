@@ -3,13 +3,14 @@ Vue.component('darts_player', {
     return {
       current_value: null,
       score: 0,
+      remainingPoints: 301,
     }
   },
   template: '<div class="player">' +
   '<div class="player-score">' +
   '<input type="number"' +
-  'v-model="current_value" @keypress.enter="submit">' +
-  '<p>Current value: {{ current_value }}</p>' +
+  'v-model="current_value" @keypress.enter="submit" class="score-input">' +
+  '<p>Remaining points: {{ remainingPoints }}</p>' +
   '<p>Current round: {{ score }}</p>' +
   '<button @click="reseter()">Reset score</button>' +
   '</div>' +
@@ -19,17 +20,22 @@ Vue.component('darts_player', {
   '</div>',
   methods: {
     submit: function(event) {
-      this.score += parseInt(this.current_value);
+      this.current_value = parseInt(this.current_value);
+      this.score += this.current_value;
+      this.remainingPoints -= this.current_value;
       if (this.score > 301) {
-        this.score -= parseInt(this.current_value);
+        this.score -= this.current_value;
+        this.remainingPoints += this.current_value;
       } else if (this.score == 301) {
         alert("we have a winner");
       }
       this.current_value = null;
+      document.getElementsByClassName("myAnchor").blur();
     },
     reseter: function(event) {
       this.current_value = 0;
       this.score = 0;
+      this.remainingPoints = 301;
     }
   },
   computed: {
