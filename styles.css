@@ -43,7 +43,7 @@ body {
 
 .progress-bar-container {
   height: 16px;
-  width: 153px;
+  width: 180px;
   position: relative;
   border: 1px solid #FF555A;
   background: linear-gradient(90deg, #FF555A, #224D05);
@@ -75,7 +75,8 @@ body {
   flex-direction: column;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  justify-content: space-around;
+  width: 220px; }
 
 .player-container {
   -webkit-box-align: center;
@@ -112,7 +113,7 @@ body {
 .title {
   text-align: center;
   margin-bottom: 32px;
-  margin-top: 16px;}
+  margin-top: 16px; }
 
 .score {
   -webkit-align-self: center;
