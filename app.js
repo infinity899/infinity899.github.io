@@ -9,7 +9,7 @@ Vue.component('darts_player', {
   template: '<div class="player">' +
   '<div class="player-score">' +
   '<input type="number"' +
-  'v-model="current_value" @keypress.enter="submit" class="score-input">' +
+  'v-model="current_value" @keypress.enter="submit">' +
   '<p>Remaining points: {{ remainingPoints }}</p>' +
   '<p>Current round: {{ score }}</p>' +
   '<button @click="reseter()">Reset score</button>' +
@@ -30,7 +30,6 @@ Vue.component('darts_player', {
         alert("we have a winner");
       }
       this.current_value = null;
-      document.getElementsByClassName("myAnchor").blur();
     },
     reseter: function(event) {
       this.current_value = 0;
