@@ -10,12 +10,14 @@ Vue.component('darts_player', {
   '<div class="player-score">' +
   '<input type="number"' +
   'v-model="current_value" @keypress.enter="submit">' +
-  '<p>Remaining points: {{ remainingPoints }}</p>' +
-  '<p>Current round: {{ score }}</p>' +
-  '<button @click="reseter()" class="button btn-reseter">Reset score</button>' +
-  '</div>' +
+  '<div class="progress">' +
   '<div class="progress-bar-container">' +
   '<div class="progress-bar" :style="myStyle"></div>' +
+  '</div>' +
+  '<span> {{ remainingPoints }}</span>' +
+  '</div>' +
+  '<p class="score">Score: {{ score }}</p>' +
+  '<button @click="reseter()" class="button btn-reseter">Reset score</button>' +
   '</div>' +
   '</div>',
   methods: {
@@ -40,7 +42,7 @@ Vue.component('darts_player', {
   computed: {
     myStyle: function() {
       return {
-        height: this.score / 2 + 'px'
+        width: (301 - (this.score)) / 2 + 'px'
       }
     }
   }
