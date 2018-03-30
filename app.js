@@ -42,7 +42,7 @@ Vue.component('darts_player', {
   computed: {
     myStyle: function() {
       return {
-        width: (301 - (this.score)) / 2 + 'px'
+        width: (100 - (this.score)/3 ) + '%'
       }
     }
   }
