@@ -11,9 +11,9 @@
 <body>
 <h1 class="title">Darts Tracker</h1>
 <div id="darts-tracker">
-    <button class="button add-player" @click="inc++">Add player</button>
+    <input class="button add-player" type="text" v-model="name_value" @keypress.enter="submit_player" placeholder="Submit player...">
      <div v-for="n in inc" class="player-container">
-         <h4 class="player-name"> Player - {{ n }}</h4>
+         <h4 class="player-name"> Senior {{ player[n-1] }}</h4>
          <darts_player></darts_player>
      </div>
 </div>
