@@ -9,11 +9,11 @@
     <title>Darts game</title>
 </head>
 <body>
-<h1>Darts Tracker</h1>
+<h1 class="title">Darts Tracker</h1>
 <div id="darts-tracker">
-    <button class="add-player" @click="inc++">Add player</button>
-     <div v-for="n in inc">
-         <h4> Player - {{ n }}</h4>
+    <button class="button add-player" @click="inc++">Add player</button>
+     <div v-for="n in inc" class="player-container">
+         <h4 class="player-name"> Player - {{ n }}</h4>
          <darts_player></darts_player>
      </div>
 </div>
