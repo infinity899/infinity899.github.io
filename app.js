@@ -12,7 +12,7 @@ Vue.component('darts_player', {
   'v-model="current_value" @keypress.enter="submit">' +
   '<p>Remaining points: {{ remainingPoints }}</p>' +
   '<p>Current round: {{ score }}</p>' +
-  '<button @click="reseter()">Reset score</button>' +
+  '<button @click="reseter()" class="button btn-reseter">Reset score</button>' +
   '</div>' +
   '<div class="progress-bar-container">' +
   '<div class="progress-bar" :style="myStyle"></div>' +
