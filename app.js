@@ -9,7 +9,7 @@ Vue.component('darts_player', {
   template: '<div class="player">' +
   '<div class="player-score">' +
   '<input type="number"' +
-  'v-model="current_value" @keypress.enter="submit">' +
+  'v-model="current_value" @keypress.enter="submit" placeholder="Submit score...">' +
   '<div class="progress">' +
   '<div class="progress-bar-container">' +
   '<div class="progress-bar" :style="myStyle"></div>' +
